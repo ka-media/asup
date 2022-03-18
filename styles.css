@@ -84,14 +84,18 @@ h3 {
     text-align: center;
  }
 
-p {
-     color: var(--green);
-}
+
 
 .container {
      width: 75%;
      margin-left: 12%;
      margin-top: 0;
+}
+
+.container p {
+     color: var(--green);
+     padding: 10px;
+     background: var(--white);
 }
 
 .log-container {
