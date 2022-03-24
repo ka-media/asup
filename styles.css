@@ -9,8 +9,8 @@
      --grey: #f5f5f5;
      --black1: #000;
      --black2: #999;
-     --green: #1eb40a;
-     --success: #0ef81a;
+     --green: #148f06;
+     --success: #0df519;
      --background: #deeec1;
 }
 
@@ -28,6 +28,7 @@ html {
 header {
      display: block;
      position: fixed;
+     z-index: 2;
      top: 0;
      left: 0;
      padding: 10px;
@@ -42,7 +43,7 @@ header .head-container {
  }
 
 header .head-container img {
-     width: 100px;
+     width: 50px;
 }
 
 nav a:visited,
@@ -60,76 +61,145 @@ nav > ul > li {
      display: inline-block;
      list-style: none;
      margin: 0 5px 0 5px;
-}
+     text-decoration: none;
+} 
 
 .header-line {
      margin: 0;
-     border: 2px solid var(--green);
+     border:5px solid var(--green);
      color: var(--green);
 }
 
-h1 {
-     color: var(--green);
+main {
+     display: block;
+     padding-top: 2em;
+     padding-bottom: 3em;
+     min-height: 85%;
+}
+
+article {
+     padding: 0em;
+     width: 100%;
+}
+
+article img {
+     width: 100%;
+}
+
+article p {
+     color: var(--white);
+     margin: 0.5em 0 0.5em 0;
+}
+
+/* Carousel Styles*/
+
+.carousel-caption {
+     bottom: 3rem;
+     z-index: 10;
+}
+
+.carousel-caption h1 {
+     position: relative;
+     z-index: 0;
+     font-weight: bold;
+     text-shadow: 1px 3px 1px var(--black1);
+     color: var(--white);
      text-align: center;
 }
+
+.carousel-caption p {
+     color: var(--white);
+     margin: 0.5em 0 0.5em 0;
+     text-shadow: 1px 3px 1px var(--black1);
+}
+
+.carousel-item {
+     height: 32rem;
+     max-width: 100vw;
+     background-size: cover;
+     background-position: center center;
+     background-repeat: no-repeat;
+}
+
+#welcomeCarousel {
+     z-index: 0;
+     margin-top: 5em;
+}
+
+.welcome-carousel-image1 {
+     box-shadow: inset 0 0 100vw rgba(0, 0, 0, 0.3);
+     background-image: url('public/img/asupexco.jpg');
+}
+
+.welcome-carousel-image2 {
+     box-shadow: inset 0 0 100vw rgba(0, 0, 0, 0.3);
+     background-image: url('public/img/asupman.jpg');
+}
+
+.welcome-carousel-image3 {
+     box-shadow: inset 0 0 100vw rgba(0, 0, 0, 0.3);
+     background-image: url('public/img/asupgov.jpg');
+}
+
+/* Carousel Style End */
 
 h2 {
-     margin-top: 100px;
+     margin-top: 4em;
+     font-weight: bold;
      color: var(--green);
      text-align: center;
 }
+
+.short-msg h2 {
+     margin-top: 1em;
+}
+
+.author {
+     text-decoration: none;
+}
+
+.potrait img {
+     display: block;
+     width: 50%;
+     margin-left: 23%;
+     margin-top: 5em;
+     margin-bottom: 0;
+     border-radius: 50%;
+     box-shadow: 1px 1px 20px 1px;
+} 
 
 h3 {
     color: #a52a2a;
     text-align: center;
  }
 
-.container {
-     width: 75%;
-     margin-left: 12%;
+.container a:link {
+     text-decoration: none;
+}
+
+#pub-date, #p-date {
+     color: var(--black2);
+}
+
+.min-container {
+     width: 100%;
+     margin-left: 0;
      margin-top: 0;
 }
+/*
 
-.container p {
-     color: var(--green);
-     padding: 10px;
-}
+@media screen and (min-width: 678px) {
+     .about-main-child {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+     }
+ }
 
-.log-container {
-     margin-right: 10px;
-     margin-top: 100px;
-     display: flex;
-     flex-direction: row;
-     justify-content: flex-end;
-}
-
-.about-container {
-     margin-top: 20px;
-     background-color: var(--white);
-     box-shadow: 0 7px 25px var(--black2);
-     border-radius: 15px;
-}
-
-.about-container .about-banner img {
-     width: 25%;
-     margin-left: 37%;
-     
-}
-
-.banner img {
-     width: 100%;
-     margin-top: 20px;
-     box-shadow: 0 7px 25px var(--black2);
-}
-
-caption {
-     color: var(--green);
-     text-align: center;
-}
-
-input {
-     width: 100%;
-     margin: 5px;
+about-main-child .about-bonny, about-fpog {
+     position: relative;
+     width: 50%;
+     margin-left: 25%;
 }
 
 svg {
@@ -166,8 +236,85 @@ svg {
     padding: 20px;
 }
 
+}*/
+
+.foo-container {
+     margin: 2em;
+}
+
+.about-container {
+     position: relative;
+     margin-top: 2em;
+     background-color: var(--white);
+     box-shadow: 0 7px 25px var(--black2);
+}
+
+.about-container .about-banner img {
+     width: 25%;
+     margin-left: 37%;
+}
+
+[src="public/img/asupexco.jpg"] {
+     width: 100%;
+     box-shadow: 0 7px 25px var(--black1);
+}
+
+.about-container, .min-container p {
+     color: var(--green);
+     padding: 10px;
+}
+
+min-container p {
+     color: var(--green);
+     padding: 10px;
+}
+
+.about-main-child {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: space-around;
+}
+
+input {
+     margin-bottom: 5px;
+}
+
+.login {
+     display: flex;
+     flex-direction: row;
+     justify-content: flex-end;
+     margin-top: 3em;
+     margin-right: 0.5em;
+}
+
 button {
-     margin-top: 10px;
+     margin-top: 1em;
+}
+
+.log-container button {
+     margin-top: 5em;
+     margin-bottom: 3em;
+}
+
+.msg {
+     background-color: #f82a0f;
+     font-size: 1.2em;
+     color: #fff;
+     width: 50%;
+     margin-left: 25%;
+     margin-bottom: 5px;
+     text-align: center;
+}
+
+.success {
+     background-color: #10dd76;
+     font-size: 1.2em;
+     color: #fff;
+     width: 50%;
+     margin-left: 25%;
+     margin-bottom: 5px;
+     text-align: center;
 }
 
 footer {
@@ -180,10 +327,18 @@ footer p, hr {
 }
 
 @media screen and (min-width: 678px) {
-    .container {
-         margin-top: 100px;
-         width: 35%;
-         margin-left: 32%;
-    }
+     .carousel-caption h1 {
+          width: 100%;
+          margin-top: 1em;
+          margin-bottom: 1em;
+          color: var(--white);
+          text-align: center;
+     }
+
+     .min-container {
+          width: 35%;
+          margin-left: 32%;
+          margin-top: 0;
+     }
 }
-  
+
