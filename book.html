@@ -28,12 +28,12 @@
     </div>
 
     <nav class="navbar">
-      <a href="index.html">home</a>
-      <a href="about.html">about</a>
-      <a href="book.html">booking</a>
-      <a href="contact.html">contact</a>
-      <a href="blog.html">blogs</a>
-    </nav>
+        <a href="index.html">home</a>
+        <a href="about.html">about</a>
+        <a href="book.html">booking</a>
+        <a href="contact.html">contact</a>
+        <a href="blog.html">blogs</a>
+      </nav>
 
     <form class="login-form">
 
@@ -64,36 +64,63 @@
 
   </section>
 
-   <!-- section about ends -->
+	<!-- section home starts -->
 
-  <!-- contact section starts -->
-  <section class="contact" id="contact">
+  <!-- section home ends -->
 
-    <h1 class="heading">contact us</h1>
+  <!-- filter form section home ends -->
 
-    <form>
+  <section class="form-container" id="online">
+
+    <h1 class="heading">online booking</h1>
+
+    <form class="" id="my-form">
 
       <div class="inputBox">
-        <input type="text" placeholder="name">
-        <input type="email" placeholder="email">
+        <span>Name</span>
+        <input type="text" placeholder="enter your name" id="name">
       </div>
 
       <div class="inputBox">
-        <input type="number" placeholder="number">
-        <input type="text" placeholder="subject">
+        <span>phone number</span>
+        <input type="text" placeholder="enter your phone number" id="phone">
       </div>
 
-      <textarea placeholder="your message" id="38" cols="10" rows=""></textarea>
+      <div class="inputBox">
+        <span>address</span>
+        <input type="text" placeholder="enter your address in bonny" id="address">
+      </div>
 
-      <input type="submit" value="send message" class="btn">
+      <div class="inputBox">
+        <span>close contact name</span>
+        <input type="text" placeholder="enter close contact name" id="next">
+      </div>
+
+      <div class="inputBox">
+        <span>close contact phone</span>
+        <input type="text" placeholder="enter your close contact number" id="nextNum">
+      </div>
+
+      <div class="inputBox">
+        <span>date</span>
+        <input type="date" id="date">
+      </div>
+
+      <div class="inputBox">
+        <span>time</span>
+        <input type="time" id="time">
+      </div>
+      
+        <div class="msg"></div>
+      
+
+      <input type="submit" class="btn" value="submit" id="submit">
 
     </form>
 
   </section>
-   <!-- contact section ends -->
 
-   
-   <!-- blogs section ends -->
+  <!-- filter form section home ends -->
 
    <!-- footer section starts -->
 
@@ -139,50 +166,7 @@
 
    <script type="text/javascript" src="public/js/index.js"></script>
 
-  <script type="text/javascript">
-    /*let navbar = document.querySelector('.navbar')
-
-    document.querySelector('#menu-btn').onclick = () => {
-      navbar.classList.toggle('active');
-      loginForm.classList.remove('active');
-      searchForm.classList.remove('active');
-    }
-
-    let loginForm = document.querySelector('.login-form')
-
-    document.querySelector('#login-btn').onclick = () => {
-      loginForm.classList.toggle('active');
-      searchForm.classList.remove('active');
-      navbar.classList.remove('active');
-    }
-
-    let searchForm = document.querySelector('.search-form')
-
-    document.querySelector('#search-btn').onclick = () => {
-      searchForm.classList.toggle('active');
-      navbar.classList.remove('active');
-      loginForm.classList.remove('active');
-    }
-
-    window.onscroll = () => {
-      navbar.classList.remove('active');
-      loginForm.classList.remove('active');
-      searchForm.classList.remove('active');
-    }
-
-    let themeBtn = document.querySelector('#theme-btn')
-
-    themeBtn.onclick = () => {
-      themeBtn.classList.toggle('fa-sun')
-
-      if (themeBtn.classList.contains('fa-sun')) {
-        document.body.classList.add('active');
-      } 
-      else {
-        document.body.classList.remove('active');
-      }
-    }*/
-  </script>
+  <script type="text/javascript" src="public/js/book.js"></script>
   
 </body>
 </html>
